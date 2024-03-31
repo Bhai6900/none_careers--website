@@ -24,7 +24,7 @@ JOBS=[
     'id':4,
     'title': 'backend Engineer',
     'location':'San Francisco , USA',
-    'salary':'USD.10,00,000',
+    'salary':'USD.1,600,000',
   },
 
 ]
