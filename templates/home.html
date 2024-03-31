@@ -2,56 +2,36 @@
 <html lang="ne">
   <head>
     <title> one learner</title>
+     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <style>
-      h1
-      {
-       font-size:40px; 
-        font-family: Roboto;
-        font-weight:normal;
-        color:rgb(50,50,50);
-        text-align:center;
-      }
-      #banner
-      {
-        height:360px;
+      #banner{
+        height: 360px;
         width:100%;
-        object-fit:cover;
-        
       }
-      h2
-      {
-        font-family:Roboto;
-        font-size:32px;
-        color:rgb(100,100,100);
-        text-align:center;
-        font-weight:normal;
-        
-      }
-      .bodytext
-      {
-        font-family:Roboto;
-        color:rgb(80,80,80)
-      }
-      #container
-      {
-        max-width:720px;
-        margin:0 auto;
-      }
+      
     </style>
   </head>
   <body>
-    <div id="container">
-    <h1> one learner</h1>
-    <img id="banner" src="https://fe16f7d4-4e78-4df8-98b0-c4169dc879f9-00-2fch0srjp2o3l.pike.replit.dev/static/banner.jpg" >
-    <h2> ABOUT ONE LEARNER</h2>
-    <P class="bodytext">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Amet luctus venenatis lectus magna fringilla urna porttitor rhoncus dolor. Purus non enim praesent elementum facilisis. Consequat id porta nibh venenatis. Interdum consectetur libero id faucibus nisl tincidunt eget. Leo vel orci porta non pulvinar. Facilisi nullam vehicula ipsum a arcu. Feugiat in ante metus dictum at tempor commodo ullamcorper. Risus commodo viverra maecenas accumsan lacus vel facilisis volutpat. Nisl nisi scelerisque eu ultrices vitae auctor eu augue. Varius vel pharetra vel turpis. Lobortis scelerisque fermentum dui faucibus in ornare. Mi in nulla posuere sollicitudin aliquam. Vestibulum morbi blandit cursus risus at ultrices.
+    <div class="container">
+    <h1 class="text-center mt-2 mb-4"> {{ company_name }}company</h1>
+    <img  id="banner" class="img-fluid" src="https://fe16f7d4-4e78-4df8-98b0-c4169dc879f9-00-2fch0srjp2o3l.pike.replit.dev/static/banner.jpg" >
+    <h2 class="text-center mt-2 mb-4"> ABOUT ONE LEARNER</h2>
+    <P class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Amet luctus venenatis lectus magna fringilla urna porttitor rhoncus dolor. Purus non enim praesent elementum facilisis. Consequat id porta nibh venenatis. Interdum consectetur libero id faucibus nisl tincidunt eget. Leo vel orci porta non pulvinar. Facilisi nullam vehicula ipsum a arcu. Feugiat in ante metus dictum at tempor commodo ullamcorper. Risus commodo viverra maecenas accumsan lacus vel facilisis volutpat. Nisl nisi scelerisque eu ultrices vitae auctor eu augue. Varius vel pharetra vel turpis. Lobortis scelerisque fermentum dui faucibus in ornare. Mi in nulla posuere sollicitudin aliquam. Vestibulum morbi blandit cursus risus at ultrices.
 </P>
-    <h2>OPEN POSITIONS </h2>
-      
-    <P class="bodytext"> TOO DO- SHOW THE JOBS HERE</P>
-    <div style="text-align:center;">
-    <button>CONTACK US</button>
-      <p>copyright 2024 one learner</p>
+    <h2 class="text-center">OPEN POSITIONS </h2>
+      <div >   
+        {% for job in jobs %} 
+
+        {% include 'jobitem.html' %}
+         
+  
+        {% endfor %}
+      </div>
+    <div class="text-center" >
+    <button class="btn btn-primary btn-lg" >CONTACK US</button>
+      <p class="mt-4">copyright 2024 one learner</p>
     </div>
     </div>
   </body>
